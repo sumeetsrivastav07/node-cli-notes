@@ -1,4 +1,4 @@
-import { addNote } from "./notes.js";
+import { addNote,listNotes } from "./notes.js";
 console.log("CLI STARTED");
 const command=process.argv[2];
 const argument=process.argv[3];
@@ -10,3 +10,9 @@ if(command==="add"){
     addNote(argument);
     console.log("Note added successfully");
 }
+else if(command==='list'){
+    listNotes();}
+    else {
+        console.log("Unknown command");
+    }
+
